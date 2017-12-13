@@ -49,13 +49,14 @@ class AlertContainer extends Component {
   }
 
   show = (message = '', options = {}) => {
-    const {theme, time} = this.props
+    const {theme, time, closeButton} = this.props
 
     const alert = {
       id: nanoid(7),
       message,
       time,
       theme,
+	  closeButton,
       ...options
     }
 

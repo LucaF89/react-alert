@@ -13,6 +13,7 @@ class AlertMessage extends Component {
     type: 'info',
     theme: 'dark',
     time: 0,
+    closeButton: true,
     onRemoveAlert: () => {}
   }
 
@@ -26,6 +27,7 @@ class AlertMessage extends Component {
     type: PropTypes.oneOf(['info', 'success', 'error']),
     theme: PropTypes.oneOf(['dark', 'light']),
     time: PropTypes.number,
+    closeButton: PropTypes.bool,
     onRemoveAlert: PropTypes.func
   }
 
@@ -45,8 +47,17 @@ class AlertMessage extends Component {
   }
 
   render () {
-    const {message, theme, icon, type} = this.props
+    const {message, theme, icon, type, closeButton} = this.props
     const dark = theme === 'dark'
+    var closeButtonComponent =
+      <Close
+        glam={{dark}}
+        onClick={this._removeItself}
+        />
+
+    if (!closeButton) {
+      closeButtonComponent = ''
+    }
 
     return (
       <Alert glam={{dark}}>
@@ -56,10 +67,7 @@ class AlertMessage extends Component {
         <Message>
           {message}
         </Message>
-        <Close
-          glam={{dark}}
-          onClick={this._removeItself}
-        />
+        {closeButtonComponent}
       </Alert>
     )
   }

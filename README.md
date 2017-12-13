@@ -31,7 +31,8 @@ export default class App extends Component {
     position: 'bottom left',
     theme: 'dark',
     time: 5000,
-    transition: 'scale'
+    transition: 'scale',
+	closeButton: true
   }
 
   showAlert = () => {
@@ -81,6 +82,7 @@ The `AlertContainer` component accepts the following props:
   theme: 'dark', // the color theme of the alert, can be [dark, light]
   time: 5000, // the time in miliseconds to the alert close itself, use 0 to prevent auto close (apply to all alerts)
   transition: 'scale' // the transition animation, can be [scale, fade]
+  closeButton: true // the close button could be shown or not setting this prop to true or false
 }
 ```
 

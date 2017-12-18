@@ -24,7 +24,7 @@
     "test:watch": "standard --fix && jest --watch --coverage --no-cache"
   },
   "peerDependencies": {
-    "react": "^15.5.4"
+    "react": "^16.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -37,9 +37,9 @@
     "enzyme": "^2.8.2",
     "jest-cli": "^19.0.2",
     "prop-types": "^15.5.8",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-test-renderer": "^15.5.4",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-test-renderer": "^16.1.1",
     "standard": "^10.0.3"
   },
   "babel": {
